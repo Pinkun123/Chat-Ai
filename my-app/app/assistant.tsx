@@ -11,10 +11,14 @@ export const Assistant = () => {
   });
 
   return (
-    <AssistantRuntimeProvider runtime={runtime}>
-      <div className="grid h-dvh grid-cols-[200px_1fr] gap-x-2 px-4 py-4">
+  <AssistantRuntimeProvider runtime={runtime}>
+      <div className="grid h-dvh grid-cols-1 md:grid-cols-[200px_1fr] gap-4 px-2 md:px-4 py-2 md:py-4">
+      <div className="md:block">
         <ThreadList />
+      </div>
+      <div className="flex-1">
         <Thread />
+      </div>
       </div>
     </AssistantRuntimeProvider>
   );
